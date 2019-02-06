@@ -4,7 +4,7 @@ Lightning fast T-SQL refreshment cheat sheet.
 
 ## Select
 
-```mssql
+```sql
 -- Syntax
 SELECT <column1, column2, column3...>
 FROM <table_name>
@@ -24,7 +24,7 @@ FROM dbo.Projects;
 
 ## Where
 
-```mssql
+```sql
 -- Syntax
 SELECT <column1, column2, column3...>
 FROM <table_name>
@@ -38,7 +38,7 @@ WHERE name = 'Alpha';
 
 ## And, Or, Not
 
-```mssql
+```sql
 -- AND Syntax
 SELECT <column1, column2, column3..>
 FROM <table_name>
@@ -52,7 +52,7 @@ WHERE name = 'Alpha'
 AND created_dt > '2019-01-01';
 ```
 
-```mssql
+```sql
 -- OR Syntax
 SELECT <column1, column2, column3..>
 FROM <table_name>
@@ -66,7 +66,7 @@ WHERE name = 'Alpha'
 OR name = 'Omega';
 ```
 
-```mssql
+```sql
 -- NOT Syntax
 SELECT <column1, column2, column3..>
 FROM <table_name>
@@ -80,7 +80,7 @@ WHERE NOT name = 'Alpha';
 
 ## Insert
 
-```mssql
+```sql
 -- Syntax
 INSERT INTO <table_name> <column1, column2, column3...>
 VALUES <value1, value2, value3...>;
@@ -96,7 +96,7 @@ VALUES (1, 'Alpha', '2019-02-05');
 
 ## Update
 
-```mssql
+```sql
 -- Syntax
 UPDATE <table_name>
 SET <column> = <value>
@@ -114,7 +114,7 @@ SET created_dt = '2019-01-01';
 
 ## Order By
 
-```mssql
+```sql
 -- Syntax
 SELECT <column1, column2, column3...>
 FROM <table_name>
@@ -129,12 +129,12 @@ ORDER BY created_dt DESC;
 SELECT id, name, created_dt
 FROM dbo.Projects
 ORDER BY created_dt DESC,
-		 name;
+         name;
 ```
 
 ## Null Values
 
-```mssql
+```sql
 -- Syntax (Also works for Updates and Deletes)
 SELECT <column1, column2, column3...>
 FROM <table_name>
@@ -153,7 +153,7 @@ WHERE name IS NOT NULL;
 
 ## Delete
 
-```mssql
+```sql
 -- Syntax
 DELETE FROM <table_name> [WHERE <condition>];
 
@@ -167,7 +167,7 @@ DELETE FROM dbo.Projects;
 
 ## Top
 
-```mssql
+```sql
 -- Syntax
 SELECT TOP <num> [PERCENT] <column1, column2, column3...>
 FROM <table_name>;
@@ -187,7 +187,7 @@ ORDER BY name;
 
 ### Min and Max
 
-```mssql
+```sql
 -- Syntax
 SELECT MIN|MAX(column) AS <alias>
 FROM <table_name>;
@@ -203,7 +203,7 @@ FROM dbo.Projects;
 
 ### Count, Avg and Sum
 
-```mssql
+```sql
 -- Syntax
 SELECT COUNT|AVG|SUM(column) AS <alias>
 FROM <table_name>;
